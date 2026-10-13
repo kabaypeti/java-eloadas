@@ -1,5 +1,6 @@
 package com.example.javaeloadas;
 
+import com.example.javaeloadas.attribute.PriceAttribute;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.stereotype.Controller;

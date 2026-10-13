@@ -1,0 +1,81 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+<head>
+    <title>Java Programozás előadás házi feladat</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" th:href="@{assets/css/main.css}" />
+</head>
+<body class="is-preload">
+
+<!-- Wrapper -->
+<div id="wrapper">
+
+    <!-- Main -->
+    <div id="main">
+        <div class="inner">
+
+            <!-- Header -->
+            <header id="header">
+                <a th:href="@{/}" class="logo"><strong>JAVA PROGRAMOZÁS ELŐADÁS</strong> házi feladat</a>
+            </header>
+
+            <!-- Banner -->
+            <section id="banner">
+                <div class="content">
+                </div>
+            </section>
+
+        </div>
+    </div>
+
+    <!-- Sidebar -->
+    <div id="sidebar">
+        <div class="inner">
+
+            <!-- Menu -->
+            <nav id="menu">
+                <header class="major">
+                    <h2>Menü</h2>
+                </header>
+                <ul>
+                    <li><a th:href="@{/}">Főoldal</a></li>
+                    <li><a th:href="@{mnbsoap}">MNB Adatok</a></li>
+                    <li>
+                        <span class="opener">Devizakereskedő</span>
+                        <ul>
+                            <li><a href="#">Számlainformáció</a></li>
+                            <li><a href="#">Aktuális Árak</a></li>
+                            <li><a href="#">Historikus Árak</a></li>
+                            <li><a href="#">Nyitás</a></li>
+                            <li><a href="#">Pozíciók</a></li>
+                            <li><a href="#">Zárás</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Footer -->
+            <footer id="footer">
+                <p class="copyright">Tót Benedek (NZL3EF) & Palotai Péter (CZLZYT).</p>
+            </footer>
+
+        </div>
+    </div>
+
+</div>
+
+<!-- Scripts -->
+<script th:src="@{assets/js/jquery.min.js}"></script>
+<script th:src="@{assets/js/browser.min.js}"></script>
+<script th:src="@{assets/js/breakpoints.min.js}"></script>
+<script th:src="@{assets/js/util.js}"></script>
+<script th:src="@{assets/js/main.js}"></script>
+
+</body>
+</html>

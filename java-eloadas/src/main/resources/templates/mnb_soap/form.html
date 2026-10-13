@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Java Programozás előadás házi feladat</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" th:href="@{assets/css/main-extended.css}" />
+</head>
+<body class="is-preload">
+
+<!-- Wrapper -->
+<div id="wrapper">
+
+    <!-- Main -->
+    <div id="main">
+        <div class="inner">
+
+            <!-- Header -->
+            <header id="header">
+                <a th:href="@{/}" class="logo"><strong>JAVA PROGRAMOZÁS ELŐADÁS</strong> házi feladat</a>
+            </header>
+
+            <!-- Banner -->
+            <section id="banner">
+                <div class="content">
+                    <header>
+                        <h2>Adatok megadása</h2>
+                    </header>
+                    <form action="#" th:action="@{mnbsoap}" th:object="${price}" method="post" class="form-container">
+                        <div class="row">
+                            <div class="col-3">
+                                <label for="currencies">Válasszon kezdő dátumot:</label>
+                            </div>
+                            <div class="col-6">
+                                <select id="currencies" name="currencies" th:field="*{currency}" required>
+                                    <option value="EUR">EUR</option>
+                                    <option value="USD">USD</option>
+                                    <option value="GBP">GBP</option>
+                                    <option value="JPY">JPY</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-3">
+                                <label for="startDate">Válasszon kezdő dátumot:</label>
+                            </div>
+                            <div class="col-6">
+                                <input id="startDate" type="date" th:field="*{startDate}" required>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-3">
+                                <label for="endDate">Válasszon befejező dátumot:</label>
+                            </div>
+                            <div class="col-6">
+                                <input id="endDate" type="date" th:field="*{endDate}" required>
+                            </div>
+                        </div>
+                        <input type="submit" value="Küldés" class="submit-button">
+                    </form>
+                </div>
+            </section>
+
+        </div>
+    </div>
+
+    <!-- Sidebar -->
+    <div id="sidebar">
+        <div class="inner">
+
+            <!-- Menu -->
+            <nav id="menu">
+                <header class="major">
+                    <h2>Menü</h2>
+                </header>
+                <ul>
+                    <li><a th:href="@{/}">Főoldal</a></li>
+                    <li><a th:href="@{mnbsoap}">MNB Adatok</a></li>
+                    <li>
+                        <span class="opener">Devizakereskedő</span>
+                        <ul>
+                            <li><a href="#">Számlainformáció</a></li>
+                            <li><a href="#">Aktuális Árak</a></li>
+                            <li><a href="#">Historikus Árak</a></li>
+                            <li><a href="#">Nyitás</a></li>
+                            <li><a href="#">Pozíciók</a></li>
+                            <li><a href="#">Zárás</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Footer -->
+            <footer id="footer">
+                <p class="copyright">Tót Benedek (NZL3EF) & Palotai Péter (CZLZYT).</p>
+            </footer>
+
+        </div>
+    </div>
+
+</div>
+
+<!-- Scripts -->
+<script th:src="@{assets/js/jquery.min.js}"></script>
+<script th:src="@{assets/js/browser.min.js}"></script>
+<script th:src="@{assets/js/breakpoints.min.js}"></script>
+<script th:src="@{assets/js/util.js}"></script>
+<script th:src="@{assets/js/main.js}"></script>
+
+</body>
+</html>
