@@ -5,7 +5,7 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
-<head>
+<head th:fragment="head-frg">
     <title>Java Programozás előadás házi feladat</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
@@ -21,21 +21,15 @@
         <div class="inner">
 
             <!-- Header -->
-            <header id="header">
+            <header id="header" th:fragment="header-frg">
                 <a th:href="@{/}" class="logo"><strong>JAVA PROGRAMOZÁS ELŐADÁS</strong> házi feladat</a>
             </header>
-
-            <!-- Banner -->
-            <section id="banner">
-                <div class="content">
-                </div>
-            </section>
 
         </div>
     </div>
 
     <!-- Sidebar -->
-    <div id="sidebar">
+    <div id="sidebar" th:fragment="sidebar-frg">
         <div class="inner">
 
             <!-- Menu -->
@@ -71,11 +65,13 @@
 </div>
 
 <!-- Scripts -->
-<script th:src="@{assets/js/jquery.min.js}"></script>
-<script th:src="@{assets/js/browser.min.js}"></script>
-<script th:src="@{assets/js/breakpoints.min.js}"></script>
-<script th:src="@{assets/js/util.js}"></script>
-<script th:src="@{assets/js/main.js}"></script>
+    <div th:fragment="scripts-frg">
+        <script th:src="@{assets/js/jquery.min.js}"></script>
+        <script th:src="@{assets/js/browser.min.js}"></script>
+        <script th:src="@{assets/js/breakpoints.min.js}"></script>
+        <script th:src="@{assets/js/util.js}"></script>
+        <script th:src="@{assets/js/main.js}"></script>
+    </div>
 
 </body>
 </html>

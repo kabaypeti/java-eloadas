@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Java Programozás előadás házi feladat</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <th:block th:replace="~{fragments/head}"></th:block>
     <link rel="stylesheet" th:href="@{assets/css/main-extended.css}" />
 </head>
 <body class="is-preload">
@@ -15,13 +13,9 @@
     <div id="main">
         <div class="inner">
 
-            <!-- Header -->
-            <header id="header">
-                <a th:href="@{/}" class="logo"><strong>JAVA PROGRAMOZÁS ELŐADÁS</strong> házi feladat</a>
-            </header>
+            <th:block th:replace="~{fragments/header}"></th:block>
 
-            <!-- Banner -->
-            <section id="banner">
+            <section>
                 <div class="content">
                     <h2>Historical prices:</h2>
                     <p th:text="'Price information: ' + ${output}"></p>
@@ -31,49 +25,8 @@
 
         </div>
     </div>
-
-    <!-- Sidebar -->
-    <div id="sidebar">
-        <div class="inner">
-
-            <!-- Menu -->
-            <nav id="menu">
-                <header class="major">
-                    <h2>Menü</h2>
-                </header>
-                <ul>
-                    <li><a th:href="@{/}">Főoldal</a></li>
-                    <li><a th:href="@{mnbsoap}">MNB Adatok</a></li>
-                    <li>
-                        <span class="opener">Devizakereskedő</span>
-                        <ul>
-                            <li><a href="#">Számlainformáció</a></li>
-                            <li><a href="#">Aktuális Árak</a></li>
-                            <li><a href="#">Historikus Árak</a></li>
-                            <li><a href="#">Nyitás</a></li>
-                            <li><a href="#">Pozíciók</a></li>
-                            <li><a href="#">Zárás</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </nav>
-
-            <!-- Footer -->
-            <footer id="footer">
-                <p class="copyright">Tót Benedek (NZL3EF) & Palotai Péter (CZLZYT).</p>
-            </footer>
-
-        </div>
-    </div>
-
+    <th:block th:replace="~{fragments/sidebar}"></th:block>
 </div>
-
-<!-- Scripts -->
-<script th:src="@{assets/js/jquery.min.js}"></script>
-<script th:src="@{assets/js/browser.min.js}"></script>
-<script th:src="@{assets/js/breakpoints.min.js}"></script>
-<script th:src="@{assets/js/util.js}"></script>
-<script th:src="@{assets/js/main.js}"></script>
-
+<th:block th:replace="~{fragments/head}"></th:block>
 </body>
 </html>
