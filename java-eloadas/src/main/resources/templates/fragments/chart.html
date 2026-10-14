@@ -1,0 +1,34 @@
+<th:block>
+    <script th:inline="javascript" type="text/javascript">
+        /*<![CDATA[*/
+        const dummy = [
+            {
+                date: "2026-10-03",
+                rate: {
+                    unit: "1",
+                    currency: "EUR",
+                    rate: "362.220"
+                }
+            }
+        ]
+
+        const realdata = /*[[${output}]]*/
+
+        new Chart(
+            document.getElementById('chartoutput'),
+            {
+                type: 'bar',
+                data: {
+                    labels: realdata.map(row => row.date),
+                    datasets: [
+                        {
+                            label: 'Exchange rate by date',
+                            data: realdata.map(row => parseFloat(row.rate.rate))
+                        }
+                    ]
+                }
+            }
+        )
+        /*]]>*/
+    </script>
+</th:block>

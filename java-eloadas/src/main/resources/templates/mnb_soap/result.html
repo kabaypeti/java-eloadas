@@ -5,11 +5,8 @@
     <link rel="stylesheet" th:href="@{assets/css/main-extended.css}" />
 </head>
 <body class="is-preload">
-
-<!-- Wrapper -->
+<script th:src="@{/assets/node/node_modules/chart.js/dist/chart.umd.js}"></script>
 <div id="wrapper">
-
-    <!-- Main -->
     <div id="main">
         <div class="inner">
 
@@ -17,9 +14,28 @@
 
             <section>
                 <div class="content">
-                    <h2>Historical prices:</h2>
-                    <p th:text="'Price information: ' + ${output}"></p>
+                    <div id="textoutput">
+                        <h2>Historical prices:</h2>
+                        <table>
+                            <tr>
+                                <td>Date</td>
+                                <td>Unit</td>
+                                <td>Currency</td>
+                                <td>Exchange Rate</td>
+                            </tr>
+                            <tr th:each="day,iStat:${output}">
+                                <td th:text="${day.date}"></td>
+                                <td th:text="${day.rate.unit}"></td>
+                                <td th:text="${day.rate.currency}"></td>
+                                <td th:text="${day.rate.rate}"></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div>
+                        <canvas id="chartoutput" th:attr="data=${output}"></canvas>
+                    </div>
                     <a th:href="@{'mnbsoap'}" class="submit-button"><input type="submit" value="Vissza az űrlaphoz" class="submit-button"></a>
+
                 </div>
             </section>
 
@@ -27,6 +43,7 @@
     </div>
     <th:block th:replace="~{fragments/sidebar}"></th:block>
 </div>
-<th:block th:replace="~{fragments/head}"></th:block>
+<th:block th:replace="~{fragments/scripts}"></th:block>
+<th:block th:replace="~{fragments/chart}"></th:block>
 </body>
 </html>
