@@ -1,0 +1,68 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<th:block th:replace="~{/fragments/head}"></th:block>
+	<link rel="stylesheet" th:href="@{/assets/css/main-extended.css}" />
+</head>
+<body class="is-preload">
+
+<div id="wrapper">
+	<div id="main">
+		<div class="inner">
+			<th:block th:replace="~{/fragments/header}"></th:block>
+			<section>
+				<div class="content">
+					<div class="major">
+						<h2>Aktuális árak</h2>
+					</div>
+					<hr/>
+					<form method="post" class="form-container" th:object="${instrumentForm}">
+						<div class="row">
+							<div class="col-8">
+								<select name="instrument" th:field="*{instrument}">
+									<option value="" selected disabled hidden>Válasszon devizát...</option>
+									<option th:value="${i}" th:each="i,iStat:${instruments}" th:text="${i}">
+									</option>
+								</select>
+							</div>
+							<div class="col-4">
+								<input type="submit" value="Küldés">
+							</div>
+						</div>
+					</form>
+					<hr/>
+					<th:block th:if="${renderTable}">
+						<div class="row aln-center">
+							<div class="col-4">
+								<table>
+									<tr>
+										<td>Asks</td>
+									</tr>
+									<tr th:each="p,iStat:${actualPrices.asks}">
+										<td class="align-right" th:text="${p}"></td>
+									</tr>
+								</table>
+							</div>
+							<div class="col-4">
+								<table>
+									<tr>
+										<td>Bids</td>
+									</tr>
+									<tr th:each="p,iStat:${actualPrices.bids}">
+										<td class="align-right" th:text="${p}"></td>
+									</tr>
+								</table>
+							</div>
+						</div>
+						<hr/>
+					</th:block>
+				</div>
+				<th:block th:replace="~{/fragments/back_to_main}"></th:block>
+			</section>
+		</div>
+	</div>
+	<th:block th:replace="~{/fragments/sidebar}"></th:block>
+</div>
+<th:block th:replace="~{/fragments/scripts}"></th:block>
+</body>
+</html>
