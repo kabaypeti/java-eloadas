@@ -12,7 +12,8 @@
             }
         ]
 
-        const realdata = /*[[${output}]]*/
+        var realdata = /*[[${output}]]*/
+        realdata = realdata.filter(x => x.rate != null)
 
         new Chart(
             document.getElementById('chartoutput'),

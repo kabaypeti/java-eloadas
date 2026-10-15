@@ -19,6 +19,8 @@
                         <canvas id="chartoutput" th:attr="data=${output}"></canvas>
                     </div>
                     <hr/>
+                    <a th:href="@{/mnbsoap}" class="link-button"><input type="submit" value="Vissza az űrlaphoz" class="primary-button"></a>
+                    <hr/>
                     <div id="textoutput">
                         <table>
                             <tr>
@@ -27,7 +29,7 @@
                                 <td>Currency</td>
                                 <td>Exchange Rate</td>
                             </tr>
-                            <tr th:each="day,iStat:${output}">
+                            <tr th:each="day,iStat:${output}" th:if="${day.rate} != null">
                                 <td th:text="${day.date}"></td>
                                 <td th:text="${day.rate.unit}"></td>
                                 <td th:text="${day.rate.currency}"></td>
@@ -35,7 +37,6 @@
                             </tr>
                         </table>
                     </div>
-                    <a th:href="@{/mnbsoap}" class="link-button"><input type="submit" value="Vissza az űrlaphoz" class="primary-button"></a>
 
                 </div>
             </section>
