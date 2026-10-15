@@ -8,12 +8,12 @@
             </header>
             <ul>
                 <li><a th:href="@{/}">Főoldal</a></li>
-                <li><a th:href="@{mnbsoap}">MNB Adatok</a></li>
+                <li><a th:href="@{/mnbsoap}">MNB Adatok</a></li>
                 <li>
                     <span class="opener">Devizakereskedő</span>
                     <ul>
-                        <li><a href="#">Számlainformáció</a></li>
-                        <li><a href="#">Aktuális Árak</a></li>
+                        <li><a th:href="@{/forex/account}">Számlainformáció</a></li>
+                        <li><a th:href="@{/forex/actual_prices}">Aktuális Árak</a></li>
                         <li><a href="#">Historikus Árak</a></li>
                         <li><a href="#">Nyitás</a></li>
                         <li><a href="#">Pozíciók</a></li>

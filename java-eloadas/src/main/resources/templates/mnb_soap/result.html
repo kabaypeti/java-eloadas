@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <th:block th:replace="~{fragments/head}"></th:block>
-    <link rel="stylesheet" th:href="@{assets/css/main-extended.css}" />
+    <th:block th:replace="~{/fragments/head}"></th:block>
+    <link rel="stylesheet" th:href="@{/assets/css/main-extended.css}" />
 </head>
 <body class="is-preload">
 <script th:src="@{/assets/node/node_modules/chart.js/dist/chart.umd.js}"></script>
@@ -10,12 +10,16 @@
     <div id="main">
         <div class="inner">
 
-            <th:block th:replace="~{fragments/header}"></th:block>
+            <th:block th:replace="~{/fragments/header}"></th:block>
 
             <section>
                 <div class="content">
+                    <h2>Historical prices:</h2>
+                    <div>
+                        <canvas id="chartoutput" th:attr="data=${output}"></canvas>
+                    </div>
+                    <hr/>
                     <div id="textoutput">
-                        <h2>Historical prices:</h2>
                         <table>
                             <tr>
                                 <td>Date</td>
@@ -31,19 +35,16 @@
                             </tr>
                         </table>
                     </div>
-                    <div>
-                        <canvas id="chartoutput" th:attr="data=${output}"></canvas>
-                    </div>
-                    <a th:href="@{'mnbsoap'}" class="submit-button"><input type="submit" value="Vissza az űrlaphoz" class="submit-button"></a>
+                    <a th:href="@{/mnbsoap}" class="link-button"><input type="submit" value="Vissza az űrlaphoz" class="primary-button"></a>
 
                 </div>
             </section>
 
         </div>
     </div>
-    <th:block th:replace="~{fragments/sidebar}"></th:block>
+    <th:block th:replace="~{/fragments/sidebar}"></th:block>
 </div>
-<th:block th:replace="~{fragments/scripts}"></th:block>
-<th:block th:replace="~{fragments/chart}"></th:block>
+<th:block th:replace="~{/fragments/scripts}"></th:block>
+<th:block th:replace="~{/fragments/chart}"></th:block>
 </body>
 </html>

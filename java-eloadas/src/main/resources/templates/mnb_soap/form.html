@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <th:block th:replace="~{fragments/head}"></th:block>
-    <link rel="stylesheet" th:href="@{assets/css/main-extended.css}" />
+    <th:block th:replace="~{/fragments/head}"></th:block>
+    <link rel="stylesheet" th:href="@{/assets/css/main-extended.css}" />
 </head>
 <body class="is-preload">
 
@@ -13,14 +13,14 @@
     <div id="main">
         <div class="inner">
 
-            <th:block th:replace="~{fragments/header}"></th:block>
+            <th:block th:replace="~{/fragments/header}"></th:block>
 
             <section>
                 <div class="content">
                     <header>
                         <h2>Adatok megadása</h2>
                     </header>
-                    <form action="#" th:action="@{mnbsoap}" th:object="${price}" method="post" class="form-container">
+                    <form action="#" th:action="@{/mnbsoap}" th:object="${price}" method="post" class="form-container">
                         <div class="row">
                             <div class="col-3">
                                 <label for="currencies">Válasszon kezdő dátumot:</label>
@@ -51,15 +51,15 @@
                                 <input id="endDate" type="date" th:field="*{endDate}" required>
                             </div>
                         </div>
-                        <input type="submit" value="Küldés" class="submit-button">
+                        <input type="submit" value="Küldés" class="primary-button">
                     </form>
                 </div>
             </section>
 
         </div>
     </div>
-    <th:block th:replace="~{fragments/sidebar}"></th:block>
+    <th:block th:replace="~{/fragments/sidebar}"></th:block>
 </div>
-<th:block th:replace="~{fragments/scripts}"></th:block>
+<th:block th:replace="~{/fragments/scripts}"></th:block>
 </body>
 </html>

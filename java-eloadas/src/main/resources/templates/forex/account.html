@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<th:block th:replace="~{/fragments/head}"></th:block>
+	<link rel="stylesheet" th:href="@{/assets/css/main-extended.css}" />
+</head>
+<body class="is-preload">
+
+<div id="wrapper">
+	<div id="main">
+		<div class="inner">
+			<th:block th:replace="~{/fragments/header}"></th:block>
+			<section>
+				<div class="content">
+					<div class="major">
+						<h2>Számlainformáció</h2>
+					</div>
+					<hr/>
+					<div class="row account-info">
+						<div class="col-4 account-info-left">
+							<ul>
+								<li><h3 class="icon solid fa-user user-alias" th:text="' &#34' + ${alias} + '&#34'"></h3></li>
+								<li><p class="user-id" th:text="'ID: ' + ${id}"></p></li>
+							</ul>
+						</div>
+						<div class="col-8 account-info-right">
+							<ul>
+								<li><p class="icon solid fa-clock" th:text="' Created at: ' + ${createdTime}"></p></li>
+								<li><p class="icon solid fa-money-bill" th:text="' Balance: ' + ${balance}"></p></li>
+								<li><p class="icon solid fa-dollar-sign" th:text="' Currency: ' + ${currency}"></p></li>
+								<li><p class="icon solid fa-arrow-up" th:text="' Position value: ' + ${positionValue}"></p></li>
+							</ul>
+						</div>
+					</div>
+					<hr/>
+					<th:block th:replace="~{/fragments/back_to_main}"></th:block>
+				</div>
+			</section>
+		</div>
+	</div>
+	<th:block th:replace="~{/fragments/sidebar}"></th:block>
+</div>
+<th:block th:replace="~{/fragments/scripts}"></th:block>
+</body>
+</html>
