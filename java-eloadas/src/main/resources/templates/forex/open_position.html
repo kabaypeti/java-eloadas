@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<html lang="hu" xmlns:th="http://thymeleaf.org">
+<head>
+    <th:block th:replace="~{/fragments/head}"></th:block>
+    <link rel="stylesheet" th:href="@{/assets/css/main-extended.css}" />
+</head>
+<body class="is-preload">
+
+<div id="wrapper">
+    <div id="main">
+        <div class="inner">
+            <th:block th:replace="~{/fragments/header}"></th:block>
+            <section>
+                <div class="content">
+                    <div class="major">
+                        <h2>Pozíció nyitása</h2>
+                    </div>
+                    <hr/>
+
+                    <form method="post" class="form-container" th:object="${openForm}">
+                        <div class="row">
+                            <div class="col-5">
+                                <select th:field="*{instrument}">
+                                    <option value="" selected disabled hidden>Válasszon devizát...</option>
+                                    <option th:value="${i}" th:each="i:${instruments}" th:text="${i}"></option>
+                                </select>
+                            </div>
+                            <div class="col-4">
+                                <input type="number" id="quantity" min="-100" max="100" th:field="*{units}" placeholder="Mennyiség">
+                            </div>
+                            <div class="col-3">
+                                <input type="submit" value="Küldés">
+                            </div>
+                        </div>
+                    </form>
+                    <hr/>
+
+                    <th:block th:if="${renderResult}">
+                        <div class="row aln-center">
+                            <div class="col-12">
+                                <div th:class="${success} ? 'box success' : 'box danger'">
+                                    <h3 th:text="${success} ? 'Pozíció sikeresen megnyitva' : 'Sikertelen tranzakció'"></h3>
+                                    <p th:text="'Kiválasztott instrumentum: ' + ${openForm.instrument}"></p>
+                                    <p th:text="'Mennyiség (Units): ' + ${openForm.units}"></p>
+                                    <p th:text="${tradeId}"></p>
+                                </div>
+                            </div>
+                        </div>
+                        <hr/>
+                    </th:block>
+                </div>
+                <th:block th:replace="~{/fragments/back_to_main}"></th:block>
+            </section>
+        </div>
+    </div>
+    <th:block th:replace="~{/fragments/sidebar}"></th:block>
+</div>
+<th:block th:replace="~{/fragments/scripts}"></th:block>
+</body>
+</html>
