@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<html lang="hu" xmlns:th="http://thymeleaf.org">
+<head>
+    <th:block th:replace="~{/fragments/head}"></th:block>
+    <link rel="stylesheet" th:href="@{/assets/css/main-extended.css}" />
+</head>
+<body class="is-preload">
+
+<div id="wrapper">
+    <div id="main">
+        <div class="inner">
+            <th:block th:replace="~{/fragments/header}"></th:block>
+            <section>
+                <div class="content">
+                    <div class="major">
+                        <h2>Nyitott pozíciók</h2>
+                    </div>
+                    <hr/>
+
+                    <div class="row">
+                        <div class="col-12">
+                            <table th:if="${not #lists.isEmpty(positions)}">
+                                <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Deviza</th>
+                                    <th>Nyitási idő</th>
+                                    <th class="align-right">Mennyiség</th>
+                                    <th class="align-right">Ár</th>
+                                    <th class="align-right">Aktuális profit / veszteség</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr th:each="pos : ${positions}">
+                                    <td th:text="${pos.id}"></td>
+                                    <td th:text="${pos.instrument}"></td>
+                                    <td th:text="${pos.openTime}"></td>
+                                    <td class="align-right" th:text="${pos.currentUnits}"></td>
+                                    <td class="align-right" th:text="${pos.price}"></td>
+                                    <td class="align-right" th:text="${pos.unrealizedPL}"></td>
+                                </tr>
+                                </tbody>
+                            </table>
+
+                            <div th:if="${#lists.isEmpty(positions)}" class="box info">
+                                <p>Jelenleg nincs nyitott pozíciód.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <hr/>
+                </div>
+                <th:block th:replace="~{/fragments/back_to_main}"></th:block>
+            </section>
+        </div>
+    </div>
+    <th:block th:replace="~{/fragments/sidebar}"></th:block>
+</div>
+<th:block th:replace="~{/fragments/scripts}"></th:block>
+</body>
+</html>

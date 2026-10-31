@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<html lang="hu" xmlns:th="http://thymeleaf.org">
+<head>
+    <th:block th:replace="~{/fragments/head}"></th:block>
+    <link rel="stylesheet" th:href="@{/assets/css/main-extended.css}" />
+</head>
+<body class="is-preload">
+
+<div id="wrapper">
+    <div id="main">
+        <div class="inner">
+            <th:block th:replace="~{/fragments/header}"></th:block>
+            <section>
+                <div class="content">
+                    <div class="major">
+                        <h2>Pozíció zárása</h2>
+                    </div>
+                    <hr/>
+
+                    <form method="post" class="form-container" th:object="${closeForm}">
+                        <div class="row">
+                            <div class="col-8">
+                                <input type="number" th:field="*{tradeId}" min="1" placeholder="Adja meg a Trade ID számlálót...">
+                            </div>
+                            <div class="col-4">
+                                <input type="submit" value="Pozíció Zárása">
+                            </div>
+                        </div>
+                    </form>
+                    <hr/>
+
+                    <th:block th:if="${renderResult}">
+                        <div class="row aln-center">
+                            <div class="col-12">
+                                <div th:class="${success} ? 'box success' : 'box danger'">
+                                    <h3 th:text="${success} ? 'Sikeres zárás' : 'Sikertelen tranzakció'"></h3>
+                                    <p th:text="${resultMessage}"></p>
+                                </div>
+                            </div>
+                        </div>
+                        <hr/>
+                    </th:block>
+                </div>
+                <th:block th:replace="~{/fragments/back_to_main}"></th:block>
+            </section>
+        </div>
+    </div>
+    <th:block th:replace="~{/fragments/sidebar}"></th:block>
+</div>
+<th:block th:replace="~{/fragments/scripts}"></th:block>
+</body>
+</html>
