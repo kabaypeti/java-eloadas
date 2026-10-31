@@ -46,6 +46,56 @@
     <th:block th:replace="~{/fragments/sidebar}"></th:block>
 </div>
 <th:block th:replace="~{/fragments/scripts}"></th:block>
-<th:block th:replace="~{/fragments/chart}"></th:block>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js/dist/chart.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
+
+<script th:inline="javascript" type="text/javascript">
+    /*<![CDATA[*/
+    var realdata = /*[[${output}]]*/
+        realdata = realdata.filter(x => x.rate != null)
+
+    new Chart(
+        document.getElementById('chartoutput'),
+        {
+            type: 'line',
+            data: {
+                labels: realdata.map(row => row.date),
+                datasets: [
+                    {
+                        label: 'Exchange rate',
+                        data: realdata.map(row => parseFloat(row.rate.rate)),
+                        borderColor: 'rgb(57, 217, 4)',
+                        fill: {
+                            target: 'origin',
+                            above: 'rgba(57, 217, 4, 0.4)'
+                        },
+                        pointStyle: false
+                    }
+                ]
+            },
+            options: {
+                scales: {
+                    x: {
+                        type: 'time',
+                        time: {
+                            tooltipFormat: 'dd MMM yyyy',
+                            unit: 'month',
+                            displayFormats: {
+                                quarter: 'MMM YYYY'
+                            }
+                        },
+                        title: {
+                            display: true,
+                            text: 'Date'
+                        }
+                    }
+                }
+            }
+        }
+    )
+    /*]]>*/
+</script>
 </body>
 </html>
