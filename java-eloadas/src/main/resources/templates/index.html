@@ -19,56 +19,73 @@
 					<section id="banner">
 						<div class="content">
 							<header>
-								<h1>Az oldal címe</h1>
-								<p>Lorem ipsum dolor sit amet</p>
+								<h1>Főoldal</h1>
+								<p>Üdvözöllek az oldalon!</p>
 							</header>
-							<p th:text="'Spring boot-tól átadott attribute: ' + ${exampleAttribute}"/>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla aliquam nulla sit amet eros eleifend, vitae laoreet diam posuere. Aenean congue quis quam eu bibendum. Pellentesque a hendrerit ante. Suspendisse quis nibh pretium, lacinia odio id, auctor ex. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Pellentesque facilisis nisl a urna hendrerit, et mattis risus lobortis. Nam tempus semper sollicitudin. Pellentesque vulputate tristique tortor, sed viverra diam gravida feugiat. Etiam non ipsum vitae lorem dapibus bibendum a vel dolor. Pellentesque scelerisque viverra lacus ut ullamcorper. Praesent lorem odio, convallis sit amet lectus ut, suscipit facilisis velit. </p>
-							<ul class="actions">
-								<li><a href="#" class="button big">Learn More</a></li>
-							</ul>
+							<p>Ez egy javában írt deviza kereskedő oldal, ami springboot keretrendszert használ. Az oldal segítségével le tudsz kérni deviza adatokat, időpont szerint, valamint az oldallal összekapcsolt fiók segítségével pozíciót nyitni és zárni is tudsz.</p>
 						</div>
 						<span class="image object">
-							<img th:src="@{images/pic10.jpg}" alt="" />
+							<img th:src="@{images/deviza.jpg}" alt="" />
 						</span>
 					</section>
 
 					<section>
 						<header class="major">
-							<h2>Erat lacinia</h2>
+							<h2>Aloldalak</h2>
 						</header>
 						<div class="features">
 							<article>
 								<span class="icon fa-gem"></span>
 								<div class="content">
-									<h3>Portitor ullamcorper</h3>
-									<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
+									<h3>MNB Adatok</h3>
+									<p>Itt tudod egy deviza adatait dátum szerint szűrve lekérni.</p>
 								</div>
 							</article>
 							<article>
-								<span class="icon solid fa-paper-plane"></span>
+								<span class="icon solid fa-user"></span>
 								<div class="content">
-									<h3>Sapien veroeros</h3>
-									<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
+									<h3>Számlainformáció</h3>
+									<p>Az oldallal összekötött fiók alap adatai itt találhatóak.</p>
 								</div>
 							</article>
 							<article>
 								<span class="icon solid fa-rocket"></span>
 								<div class="content">
-									<h3>Quam lorem ipsum</h3>
-									<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
+									<h3>Aktuális árak</h3>
+									<p>Ezen az oldalon tudod lekérni az adott deviza aktuális árait.</p>
 								</div>
 							</article>
 							<article>
-								<span class="icon solid fa-signal"></span>
+								<span class="icon solid fa-tag"></span>
 								<div class="content">
-									<h3>Sed magna finibus</h3>
-									<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
+									<h3>Historikus árak</h3>
+									<p>Itt tudod az adott devizának a záró árát lekérni az utóbbi 10 perc/óra/nap/hét/hónapról</p>
+								</div>
+							</article>
+							<article>
+								<span class="icon solid fa-coins"></span>
+								<div class="content">
+									<h3>Nyitás</h3>
+									<p>Itt tudsz pozíviót nyitni az adott devizából adott mennyiségben.</p>
+								</div>
+							</article>
+							<article>
+								<span class="icon solid fa-wallet"></span>
+								<div class="content">
+									<h3>Pozíciók</h3>
+									<p>Itt a jelenleg még nyitva lévő pozíviók információi találhatóak.</p>
+								</div>
+							</article>
+							<article>
+								<span class="icon solid fa-briefcase"></span>
+								<div class="content">
+									<h3>Zárás</h3>
+									<p>Itt zárhatsz le egy pozíciót ID szerint.</p>
 								</div>
 							</article>
 						</div>
 					</section>
-
+					<!--
 					<section>
 						<header class="major">
 							<h2>Ipsum sed dolor</h2>
@@ -124,6 +141,7 @@
 							</article>
 						</div>
 					</section>
+					-->
 
 				</div>
 			</div>

@@ -19,7 +19,6 @@ public class JavaEloadasApplication {
 
     @GetMapping("/")
     public String index(Model model) {
-        model.addAttribute("exampleAttribute", 123123123);
         return "index";
     }
 }
