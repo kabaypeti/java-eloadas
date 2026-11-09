@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="c10efe4e-43ad-484c-85e2-4895804b631e" name="Changes" comment="chartjs szépítés">
+      <change beforePath="$PROJECT_DIR$/java-eloadas/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/java-eloadas/pom.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GithubDefaultAccount">
+    <option name="defaultAccountId" value="9ca2c9f9-7227-435c-a8ef-a624e5be6021" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="3KVNDEEq63Y58KcP2VTap5eYP1y" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Maven.java-eloadas [clean].executor": "Run",
+    "Maven.java-eloadas [compile].executor": "Run",
+    "Maven.java-eloadas [install].executor": "Run",
+    "Maven.java-eloadas [package].executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "Spring Boot.Application.executor": "Run",
+    "Spring Boot.JavaEloadasApplication.executor": "Run",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/beane/_CODE_STUFF/_SCHOOL_PROJECTS/_JAVA/elo/java-eloadas",
+    "node.js.detected.package.jshint": "true",
+    "node.js.selected.package.jshint": "",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "MavenSettings",
+    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\IntelliJ IDEA 2026.2.3\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\beane\_CODE_STUFF\_SCHOOL_PROJECTS\_JAVA\elo\java-eloadas\java-eloadas\src\main\resources\templates\fragments" />
+      <recent name="D:\beane\_CODE_STUFF\_SCHOOL_PROJECTS\_JAVA\elo\java-eloadas\java-eloadas\src\main\resources\templates\forex" />
+      <recent name="D:\beane\_CODE_STUFF\_SCHOOL_PROJECTS\_JAVA\elo\java-eloadas\java-eloadas\src\main\resources\WEB-INF\views" />
+      <recent name="D:\beane\_CODE_STUFF\_SCHOOL_PROJECTS\_JAVA\elo\java-eloadas\java-eloadas\src\main\resources\static\assets\css" />
+      <recent name="D:\beane\_CODE_STUFF\_SCHOOL_PROJECTS\_JAVA\elo\java-eloadas\java-eloadas\src\main\resources\templates" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\beane\_CODE_STUFF\_SCHOOL_PROJECTS\_JAVA\elo\java-eloadas\java-eloadas\src\main\resources\templates\forex" />
+      <recent name="D:\beane\_CODE_STUFF\_SCHOOL_PROJECTS\_JAVA\elo\java-eloadas\java-eloadas\src\main\resources\static\assets\js" />
+      <recent name="D:\beane\_CODE_STUFF\_SCHOOL_PROJECTS\_JAVA\elo\java-eloadas\java-eloadas\src\main\resources\static\assets\node" />
+      <recent name="D:\beane\_CODE_STUFF\_SCHOOL_PROJECTS\_JAVA\elo\java-eloadas\java-eloadas\src\main\resources\templates" />
+      <recent name="D:\beane\_CODE_STUFF\_SCHOOL_PROJECTS\_JAVA\elo\java-eloadas\java-eloadas\src\main\resources\templates\fragments" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.example.javaeloadas.forex" />
+      <recent name="com.example.javaeloadas.attribute" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="java-eloadas" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.javaeloadas.JavaEloadasApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-30f59d01ecdd-a203e0a19954-intellij.indexing.shared.core-IU-262.10968.63" />
+        <option value="bundled-js-predefined-d6986cc7102b-4abd2a77f808-JavaScript-IU-262.10968.63" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c10efe4e-43ad-484c-85e2-4895804b631e" name="Changes" comment="" />
+      <created>1791638653705</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1791638653705</updated>
+    </task>
+    <task id="LOCAL-00001" summary="reszponzív téma hozzáadva&#10;tartalmaz egy index.html-t reszponzív témával">
+      <option name="closed" value="true" />
+      <created>1791652071923</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1791652071923</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="reszponzív téma hozzáadva&#10;tartalmaz egy index.html-t reszponzív témával" />
+    <MESSAGE value="soap kliens alapok&#10;- űrlap hozzáadva&#10;- visszaad adatokat" />
+    <MESSAGE value="fragment-ek" />
+    <MESSAGE value="soap kimenet&#10;- mostmár egy táblázatot ad az összes adattal&#10;- chart.js-szel megjelenít egy oszlopdiagramot (valszeg ideiglenes, lehet később változtatni)" />
+    <MESSAGE value="forex 1&#10;- oanda api, számlainformáció menü" />
+    <MESSAGE value="forex 2&#10;- aktuális árak, nem biztos hogy jó, de nem tudom mit kéne csinálnom itt??" />
+    <MESSAGE value="soap bugfix&#10;- nem próbál megjeleníteni nem létező adatot" />
+    <MESSAGE value="chartjs szépítés" />
+    <option name="LAST_COMMIT_MESSAGE" value="chartjs szépítés" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
