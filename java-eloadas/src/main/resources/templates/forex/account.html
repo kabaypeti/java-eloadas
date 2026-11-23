@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
-	<th:block th:replace="~{/fragments/head}"></th:block>
+	<th:block th:replace="~{fragments/head}"></th:block>
 	<link rel="stylesheet" th:href="@{/assets/css/main-extended.css}" />
 </head>
 <body class="is-preload">
@@ -9,7 +9,7 @@
 <div id="wrapper">
 	<div id="main">
 		<div class="inner">
-			<th:block th:replace="~{/fragments/header}"></th:block>
+			<th:block th:replace="~{fragments/header}"></th:block>
 			<section>
 				<div class="content">
 					<div class="major">
@@ -33,13 +33,13 @@
 						</div>
 					</div>
 					<hr/>
-					<th:block th:replace="~{/fragments/back_to_main}"></th:block>
+					<th:block th:replace="~{fragments/back_to_main}"></th:block>
 				</div>
 			</section>
 		</div>
 	</div>
-	<th:block th:replace="~{/fragments/sidebar}"></th:block>
+	<th:block th:replace="~{fragments/sidebar}"></th:block>
 </div>
-<th:block th:replace="~{/fragments/scripts}"></th:block>
+<th:block th:replace="~{fragments/scripts}"></th:block>
 </body>
 </html>
